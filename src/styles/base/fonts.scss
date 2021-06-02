@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Bebas Neue Cyrillic';
+	src: local('Bebas Neue Cyrillic Bold'), local('BebasNeueCyrillic-Bold'),
+	url('../fonts/BebasNeueBold.woff2') format('woff2'),
+	url('../fonts/BebasNeueBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Display';
+	src: local('SFProDisplay Regular'), local('SFProDisplay-Regular'), local('SF Pro Display Regular'),
+	url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+	url('../fonts/SFProDisplay-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Display';
+	src: local('SFProDisplay Semibold'), local('SFProDisplay-Semibold'), local('SF Pro Display Semibold'),
+	url('../fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+	url('../fonts/SFProDisplay-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Text';
+	src: local('SFProText Semibold'), local('SFProText-Semibold'), local('SF Pro Text Semibold'),
+	url('../fonts/SFProText-Semibold.woff2') format('woff2'),
+	url('../fonts/SFProText-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Text';
+	src: local('SFProText Regular'), local('SFProText-Regular'), local('SF Pro Text Regular'),
+	url('../fonts/SFProText-Regular.woff2') format('woff2'),
+	url('../fonts/SFProText-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SF Pro Text';
+	src: local('SFProText Medium'), local('SFProText-Medium'), local('SF Pro Text Medium'),
+	url('../fonts/SFProText-Medium.woff2') format('woff2'),
+	url('../fonts/SFProText-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+

@@ -1,0 +1,35 @@
+/* media */
+$media-list: (
+	'xxs': 375,
+	'xs': 560,
+	'sm': 767,
+	'md': 1079,
+	'lg': 1279,
+	'xl': 1599,
+	'xxl': 1900
+);
+
+
+/* шрифты */
+$mainFont: 'SF Pro Text', sans-serif;
+$titleFont: 'SF Pro Display', sans-serif;
+$secondFont: 'Bebas Neue Cyrillic', sans-serif;
+
+$fs-main: 15px;
+$fs-h1: 40px;
+$fs-h2: 32px;
+$fs-h3: 25px;
+$fs-h4: 20px;
+$fs-h5: 18px;
+$fs-h6: 16px;
+
+
+/* цвета */
+$textMainColor: #000000;
+$textTitleColor: #000000;
+
+$pink: #E13D78;
+$orange: #E9AA47;
+
+$linkMainColor: $pink;
+$linkHoverColor: $orange;
