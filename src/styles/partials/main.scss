@@ -6,6 +6,19 @@ body {
 	color: $textMainColor;
 }
 
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $orange;
+	border-radius: 0;
+}
+
 a{
 	color: $linkMainColor;
 	text-decoration: underline;
