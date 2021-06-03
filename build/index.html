@@ -7,13 +7,76 @@
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet">
     <title>HOME</title>
+    <style>
+      .preloader{
+      	width: 100%;
+      	top: 0;
+      	left: 0;
+      	right: 0;
+      	bottom: 0;
+      	position: fixed;
+      	display: flex;
+      	align-items: center;
+      	justify-content: center;
+      	background: #ffffff;
+      	z-index: 200;
+      	user-select: none;
+      }
+      .preloader svg text {
+      	font-family: Bebas Neue Cyrillic;
+      	stroke: #E13D78;
+      	font-size: 72px;
+      	stroke-width: 2;
+      	letter-spacing: 0.04em;
+      	animation: textAnimate 5s 1 alternate;
+      	fill: #E13D78;
+      }
+      
+      @keyframes textAnimate {
+      	0% {
+      		stroke-dasharray: 0 50%;
+      		stroke-dashoffset: 5px;
+      		fill: #E9AA47
+      	}
+      
+      	100% {
+      		stroke-dasharray: 50% 0;
+      		stroke-dashoffstet: -5px;
+      		fill: #E13D78
+      	}
+      
+      }
+      
+    </style>
+    <script>timerStart = new Date();</script>
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <svg width="100%" height="100%">
+        <defs>
+          <style>
+            @font-face {
+            	font-family: 'Bebas Neue Cyrillic';
+            	src: local('Bebas Neue Cyrillic Bold'), local('BebasNeueCyrillic-Bold'),
+            	url('../fonts/BebasNeueBold.woff2') format('woff2'),
+            	url('../fonts/BebasNeueBold.woff') format('woff');
+            	font-weight: normal;
+            	font-style: normal;
+            	font-display: swap;
+            }
+            
+          </style>
+        </defs>
+        <text x="50%" y="50%" text-anchor="middle">Близость</text>
+      </svg>
+    </div>
     <header class="header js_fixed-header">
       <div class="header__container">
-        <div class="header__logo"><a href="">Ляля Шанти</a></div>
-        <div class="header__burger"><span></span><span></span><span></span></div>
-        <div class="header__menu hm">
+        <div class="header__logo"><a href="">Ляля Шанти</a></div><a class="header__burger" href="javascript:;"><span></span><span></span><span></span></a>
+        <div class="header__menu hm"><a class="hm__close" href="javascript:;">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg></a>
           <div class="hm__item hm__item--current"><a href="">Home</a></div>
           <div class="hm__item"><a href="">Обо мне</a></div>
           <div class="hm__item"><a href="">Сессии</a></div>
@@ -24,7 +87,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="hero-block section-1"><img class="hero-block__bg" src="images/hero-bg.jpg" alt="">
+      <section class="hero-block section-1"><img class="hero-block__bg" src="images/hero-bg.jpg" alt="" loading="lazy">
         <div class="hero-block__container container">
           <div class="hero-block__content">
             <h1 class="hero-block__title">Близость</h1>
@@ -37,7 +100,7 @@
         <div class="problem__container container">
           <div class="problem__section problem__section--1 sp1">
             <div class="sp1__left">
-              <div class="sp1__left-block" data-aos="fade"><img class="sp1__left-img" src="images/shape-1.png" alt="">
+              <div class="sp1__left-block" data-aos="fade"><img class="sp1__left-img" src="images/shape-1.png" alt="" loading="lazy">
                 <div class="sp1__left-text">Нас не учили искренне и эффективно общаться</div>
               </div>
             </div>
@@ -45,25 +108,25 @@
               <div class="image-block">
                 <div class="img-mask" data-aos="image-mask-animation">
                   <div class="img-mask__inside"></div>
-                </div><img class="sp1__right-img" src="images/img-1.jpg" alt="">
+                </div><img class="sp1__right-img" src="images/img-1.jpg" alt="" loading="lazy">
               </div>
             </div>
           </div>
           <div class="problem__section problem__section--2 sp2">
-            <div class="sp1__left">
+            <div class="sp2__left">
               <div class="image-block">
                 <div class="img-mask" data-aos="image-mask-animation">
                   <div class="img-mask__inside"></div>
-                </div><img class="sp2__left-img" src="images/img-2.jpg" alt="">
+                </div><img class="sp2__left-img" src="images/img-2.jpg" alt="" loading="lazy">
               </div>
             </div>
-            <div class="sp1__right">
+            <div class="sp2__right">
               <div class="sp2__right-block">
                 <div class="sp2__right-text" data-aos="fade">Мы не умеем выстраивать истинную близость</div>
                 <div class="image-block">
                   <div class="img-mask" data-aos="image-mask-animation">
                     <div class="img-mask__inside"></div>
-                  </div><img class="sp2__right-img" src="images/img-3.jpg" alt="">
+                  </div><img class="sp2__right-img" src="images/img-3.jpg" alt="" loading="lazy">
                 </div>
               </div>
             </div>
@@ -74,14 +137,14 @@
               <div class="image-block">
                 <div class="img-mask" data-aos="image-mask-animation">
                   <div class="img-mask__inside"></div>
-                </div><img class="sp3__img" src="images/img-4.jpg" alt="">
+                </div><img class="sp3__img" src="images/img-4.jpg" alt="" loading="lazy">
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="dual section-3" data-aos="fade">
-        <div class="dual__left"><img class="dual__img" src="images/img-5.jpg" alt=""></div>
+        <div class="dual__left"><img class="dual__img" src="images/img-5.jpg" alt="" loading="lazy"></div>
         <div class="dual__right">
           <div class="dual__text">Близость с другими  — это то, что делает нас по-настоящему живыми, счастливыми, и человечными</div>
         </div>
@@ -103,13 +166,13 @@
           </div>
         </div>
       </section>
-      <section class="fullimage section-5" data-aos="fade"><img class="fullimage__bg" src="images/img-6.jpg" alt="">
+      <section class="fullimage section-5" data-aos="fade"><img class="fullimage__bg" src="images/img-6.jpg" alt="" loading="lazy">
         <div class="fullimage__container container">
           <div class="fullimage__text">Существует особая система общения, используя которую вы сможете восстановить потерянную близость и научитесь легко и быстро создавать ее в новых отношениях. <br> <span>И я покажу ее вам. </span></div>
         </div>
       </section>
       <section class="quotes section-6">
-        <div class="quotes__container container"><img class="quotes__shape" src="images/q.png" alt="" data-aos="fade">
+        <div class="quotes__container container"><img class="quotes__shape" src="images/q.png" alt="" data-aos="fade" loading="lazy">
           <div class="quotes__slider" data-aos="fade">
             <div class="swiper-container">
               <div class="swiper-wrapper">
@@ -145,7 +208,7 @@
         <div class="problem__container container">
           <div class="problem__section-1 sp1">
             <div class="sp1__left">
-              <div class="sp1__left-block" data-aos="fade"><img class="sp1__left-img" src="images/shape-2.png" alt="">
+              <div class="sp1__left-block" data-aos="fade"><img class="sp1__left-img" src="images/shape-2.png" alt="" loading="lazy">
                 <div class="sp1__left-text">Ясность.<span>Глубина.</span>Близость</div>
               </div>
             </div>
@@ -153,14 +216,14 @@
               <div class="image-block">
                 <div class="img-mask" data-aos="image-mask-animation">
                   <div class="img-mask__inside"></div>
-                </div><img class="sp1__right-img" src="images/img-7.jpg" alt="">
+                </div><img class="sp1__right-img" src="images/img-7.jpg" alt="" loading="lazy">
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="dual dual--invert section-8" data-aos="fade">
-        <div class="dual__left"><img class="dual__img" src="images/img-8.jpg" alt=""></div>
+        <div class="dual__left"><img class="dual__img" src="images/img-8.jpg" alt="" loading="lazy"></div>
         <div class="dual__right">
           <div class="dual__text">Этот марафон о том, как общаться с другими людьми для того, чтобы выстраивать настоящие отношения. Искренне, качественно и аутентично.</div>
         </div>
@@ -181,7 +244,7 @@
           </div>
         </div>
       </section>
-      <section class="fullimage section-10" data-aos="fade"><img class="fullimage__bg" src="images/img-9.jpg" alt="">
+      <section class="fullimage section-10" data-aos="fade"><img class="fullimage__bg" src="images/img-9.jpg" alt="" loading="lazy">
         <div class="fullimage__container container">
           <div class="fullimage__text">Вы удивитесь, насколько близко удовлетворение, глубина, близость и искреннее, наполняющее общение. Они буквально в паре фраз от вас. В паре <br><span>работающих фраз.</span></div>
         </div>
@@ -206,7 +269,7 @@
           </div>
         </div>
       </section>
-      <section class="registration section-12" id="registration"><img class="registration__bg" src="images/img-11.jpg" alt="">
+      <section class="registration section-12" id="registration"><img class="registration__bg" src="images/img-11.jpg" alt="" loading="lazy">
         <div class="registration__container container">
           <div class="registration__title" data-aos="fade">Близость</div>
           <div class="registration__subtitle" data-aos="fade" data-aos-delay="100">Искусство Трансформационного Общения</div>

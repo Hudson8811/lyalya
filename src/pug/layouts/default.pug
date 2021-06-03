@@ -13,7 +13,68 @@ html(lang="ru")
 
 		title= `${page.title}`
 
+		style.
+			.preloader{
+				width: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				position: fixed;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #ffffff;
+				z-index: 200;
+				user-select: none;
+			}
+			.preloader svg text {
+				font-family: Bebas Neue Cyrillic;
+				stroke: #E13D78;
+				font-size: 72px;
+				stroke-width: 2;
+				letter-spacing: 0.04em;
+				animation: textAnimate 5s 1 alternate;
+				fill: #E13D78;
+			}
+
+			@keyframes textAnimate {
+				0% {
+					stroke-dasharray: 0 50%;
+					stroke-dashoffset: 5px;
+					fill: #E9AA47
+				}
+
+				100% {
+					stroke-dasharray: 50% 0;
+					stroke-dashoffstet: -5px;
+					fill: #E13D78
+				}
+
+			}
+
+		script.
+			timerStart = new Date();
 	body
+		.preloader#preloader
+			svg(width='100%' height='100%')
+				defs
+					style.
+						@font-face {
+							font-family: 'Bebas Neue Cyrillic';
+							src: local('Bebas Neue Cyrillic Bold'), local('BebasNeueCyrillic-Bold'),
+							url('../fonts/BebasNeueBold.woff2') format('woff2'),
+							url('../fonts/BebasNeueBold.woff') format('woff');
+							font-weight: normal;
+							font-style: normal;
+							font-display: swap;
+						}
+
+				text(x='50%' y='50%' text-anchor='middle')
+					| Близость
+
+
+
 		block header
 			include ../partials/_header
 

@@ -1,9 +1,11 @@
+.main{
+	overflow: hidden;
+}
+
 .section{
 	&-5,
 	&-10,
-	&-12{
-		margin-top: 250px;
-	}
+	&-12,
 	&-2,
 	&-3,
 	&-4,
@@ -11,7 +13,19 @@
 	&-8,
 	&-9,
 	&-11{
-		padding-top: 250px;
+		margin-top: 250px;
+		@include media('xl'){
+			margin-top: 200px;
+		}
+		@include media('md'){
+			margin-top: 115px;
+		}
+		@include media('sm'){
+			margin-top: 75px;
+		}
+		@include media('xs'){
+			margin-top: 60px;
+		}
 	}
 
 
@@ -21,17 +35,43 @@
 		}
 		.sp1__left-img{
 			max-width: 560px;
+			@include media('md'){
+				max-width: 440px;
+			}
+			@include media('sm'){
+				max-width: 300px;
+			}
+		}
+	}
+	&-7{
+		.sp1__left-text{
+			padding-bottom: 75px;
+			@include media('md'){
+				padding-bottom: 0;
+				span{
+					display: block;
+				}
+			}
 		}
 	}
 }
 
 
 .hero-block{
-	background: rgba(0, 0, 0, 0.25);
 	position: relative;
 	height: 100vh;
 	min-height: 800px;
 	max-height: 1500px;
+	padding: 100px 0;
+
+	@include media('sm'){
+		min-height: 700px;
+		background: rgba(0, 0, 0, 0.25);
+	}
+	@include media('xs'){
+		min-height: 550px;
+		padding: 70px 0 25px;
+	}
 
 	&__bg{
 		display: block;
@@ -45,7 +85,7 @@
 	}
 
 	&__container{
-		height: 100%;
+		min-height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -64,12 +104,27 @@
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		color: $pink;
+		@include media('sm'){
+			font-size: 70px;
+		}
+		@include media('xs'){
+			font-size: 65px;
+		}
 	}
 	&__subtitle{
 		font-weight: 600;
 		font-size: 40px;
 		line-height: 130%;
 		font-family: $titleFont;
+		@include media('md'){
+			font-size: 37px;
+		}
+		@include media('sm'){
+			font-size: 32px;
+		}
+		@include media('xs'){
+			font-size: 25px;
+		}
 	}
 	&__text{
 		margin-top: 55px;
@@ -82,9 +137,28 @@
 			font-weight: 600;
 			font-size: 40px;
 		}
+		@include media('sm'){
+			font-size: 21px;
+			line-height: 35px;
+			margin-top: 45px;
+			span{
+				font-size: 28px;
+			}
+		}
+		@include media('xs'){
+			font-size: 17px;
+			line-height: 28px;
+			margin-top: 25px;
+		}
 	}
 	&__btn{
 		margin-top: 81px;
+		@include media('sm'){
+			margin-top: 55px;
+		}
+		@include media('xs'){
+			margin-top: 45px;
+		}
 	}
 }
 
@@ -97,8 +171,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@include media('xs'){
+		flex-direction: column;
+	}
 	&__left{
 		width: 50%;
+		@include media('xs'){
+			width: 100%;
+			padding-bottom: 60px;
+		}
 		&-block{
 			position: relative;
 		}
@@ -117,6 +198,9 @@
 			text-align: center;
 			letter-spacing: 0.06em;
 			text-transform: uppercase;
+			@include media('sm'){
+				font-size: 35px;
+			}
 			span{
 				color: $pink;
 			}
@@ -124,6 +208,9 @@
 	}
 	&__right{
 		width: 50%;
+		@include media('xs'){
+			width: 100%;
+		}
 		&-img{
 			width: 100%;
 		}
@@ -134,14 +221,35 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-top: 250px;
+	@include media('xl'){
+		margin-top: 200px;
+	}
+	@include media('md'){
+		margin-top: 100px;
+	}
+	@include media('xs'){
+		margin-top: 60px;
+	}
 	&__left{
 		width: 50%;
-		&-img{}
+		padding-right: 30px;
+		@include media('xs'){
+			display: none;
+		}
+		&-img{
+			max-width: 100%;
+		}
 	}
 	&__right{
 		width: 50%;
+		@include media('xs'){
+			width: 100%;
+		}
 		&-block{
 			max-width: 480px;
+			@include media('xs'){
+				max-width: 100%;
+			}
 		}
 		&-img{
 			width: 100%;
@@ -155,6 +263,17 @@
 			letter-spacing: 0.06em;
 			text-transform: uppercase;
 			margin-bottom: 195px;
+			@include media('md'){
+				margin-bottom: 105px;
+			}
+			@include media('sm'){
+				margin-bottom: 40px;
+				font-size: 35px;
+			}
+			@include media('xs'){
+				text-align: center;
+				margin-bottom: 60px;
+			}
 			span{
 				color: $pink;
 			}
@@ -163,6 +282,15 @@
 }
 .sp3{
 	margin-top: 278px;
+	@include media('xl'){
+		margin-top: 200px;
+	}
+	@include media('md'){
+		margin-top: 100px;
+	}
+	@include media('xs'){
+		margin-top: 60px;
+	}
 	&__block{
 		display: flex;
 		flex-direction: column;
@@ -179,6 +307,18 @@
 		width: 380px;
 		display: block;
 		z-index: 1;
+		@include media('md'){
+			top: 88px;
+			right: -29px;
+			width: 210px;
+		}
+		@include media('sm'){
+			width: 150px;
+			top: 70px;
+		}
+		@include media('xs'){
+			display: none;
+		}
 	}
 	&__text{
 		font-family: $secondFont;
@@ -190,6 +330,13 @@
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		margin-bottom: 96px;
+		@include media('md'){
+			margin-bottom: 50px;
+		}
+		@include media('xs'){
+			font-size: 35px;
+			margin-bottom: 60px;
+		}
 		span{
 			color: $pink;
 		}
@@ -206,8 +353,27 @@
 	min-height: 708px;
 	box-sizing: border-box;
 	width: 100%;
+	position: relative;
+	background: $orange;
+	@include media('md'){
+		min-height: 500px;
+	}
+	@include media('sm'){
+		min-height: 350px;
+	}
+	@include media('xs'){
+		min-height: 250px;
+	}
 	&__left{
 		width: 50%;
+		@include media('xs'){
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+		}
 	}
 	&__right{
 		width: 50%;
@@ -216,7 +382,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		background: $orange;
+		@include media('xl'){
+			padding: 45px 45px 45px 70px;
+		}
+		@include media('md'){
+			padding: 30px 40px 30px 50px;
+		}
+		@include media('sm'){
+			padding: 30px 15px 30px 30px;
+		}
+		@include media('xs'){
+			padding: 50px 15px;
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			background: rgba(0,0,0,0.5);
+		}
 	}
 	&__img{
 		width: 100%;
@@ -231,6 +412,16 @@
 		font-size: 40px;
 		line-height: 130%;
 		color: #FFFFFF;
+		@include media('xl'){
+			font-size: 32px;
+		}
+		@include media('md'){
+			font-size: 26px;
+		}
+		@include media('sm'){
+			font-size: 21px;
+			text-align: center;
+		}
 	}
 
 	&--invert{
@@ -238,6 +429,15 @@
 		.dual__right{
 			padding: 60px 130px 60px 60px;
 			justify-content: flex-end;
+			@include media('xl'){
+				padding: 45px 70px 45px 45px;
+			}
+			@include media('md'){
+				padding: 30px 50px 30px 40px;
+			}
+			@include media('sm'){
+				padding: 30px 30px 30px 15px;
+			}
 		}
 	}
 }
@@ -254,12 +454,24 @@
 		text-align: center;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
+		@include media('sm'){
+			font-size: 45px;
+		}
+		@include media('sm'){
+			font-size: 35px;
+		}
 	}
 	&__flex{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-top: 161px;
+		@include media('xl'){
+			margin-top: 100px;
+		}
+		@include media('md'){
+			margin-top: 50px;
+		}
 	}
 	&__item{
 		margin-bottom: 53px;
@@ -272,6 +484,25 @@
 		line-height: 29px;
 		min-height: 87px;
 
+		@include media('md'){
+			margin-bottom: 35px;
+			padding-left: 57px;
+			font-size: 19px;
+			line-height: 26px;
+			min-height: 78px;
+		}
+		@include media('sm'){
+			margin-bottom: 25px;
+			min-height: 52px;
+			width: 100%;
+		}
+		@include media('sm'){
+			font-size: 17px;
+			line-height: 23px;
+			min-height: 46px;
+			padding-left: 40px;
+		}
+
 		&::before{
 			content: "";
 			display: block;
@@ -283,6 +514,11 @@
 			position: absolute;
 			left: 0;
 			top: 7px;
+			@include media('sm'){
+				width: 27px;
+				height: 20px;
+				top: 2px;
+			}
 		}
 	}
 
@@ -294,7 +530,10 @@
 		align-items: center;
 		justify-content: center;
 		background: #F7F7F7;
-
+		margin-top: 40px;
+		@include media('sm'){
+			margin-top: 25px;
+		}
 		&-text{
 			font-family: $secondFont;
 			font-style: normal;
@@ -305,6 +544,9 @@
 			letter-spacing: 0.06em;
 			text-transform: uppercase;
 			color: $orange;
+			@include media('sm'){
+				font-size: 35px;
+			}
 			span{
 				color: $pink;
 			}
@@ -317,12 +559,20 @@
 	width: 100%;
 	min-height: 888px;
 	box-sizing: border-box;
-	background: rgba(0, 0, 0, 0.45);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 40px 0;
-
+	@include media('xl'){
+		min-height: 700px;
+	}
+	@include media('md'){
+		min-height: 550px;
+	}
+	@include media('sm'){
+		min-height: 400px;
+		background: rgba(0, 0, 0, 0.45);
+	}
 	&__bg{
 		display: block;
 		width: 100%;
@@ -346,6 +596,12 @@
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		color: #FFFFFF;
+		@include media('sm'){
+			font-size: 35px;
+		}
+		@include media('sm'){
+			font-size: 28px;
+		}
 		span{
 			color: $orange;
 		}
@@ -355,28 +611,54 @@
 
 .quotes{
 	background: $pink;
-	min-height: 1030px;
 	padding: 262px 40px;
 	color: #ffffff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@include media('xl'){
+		padding: 150px 40px;
+	}
+	@include media('md'){
+		padding: 100px 40px;
+	}
+	@include media('sm'){
+		padding: 50px 40px;
+	}
+	@include media('xs'){
+		padding: 50px 10px;
+	}
 	&__shape{
 		width: 96px;
 		height: 96px;
 		display: block;
 		object-fit: contain;
 		margin: 0 auto;
+		@include media('md') {
+			width: 75px;
+			height: 75px;
+		}
+		@include media('xs'){
+			width: 50px;
+			height: 50px;
+		}
 	}
 	&__slider{
 		position: relative;
 	}
 }
 .swiper{
-	&-container{
+	&-container {
 		margin-top: 74px;
 		width: 760px;
 		max-width: 100%;
+		@include media('md') {
+			margin-top: 50px;
+			width: 500px;
+		}
+		@include media('xs'){
+			margin-top: 35px;
+		}
 	}
 	&-button{
 		position: absolute;
@@ -384,18 +666,34 @@
 		color: #ffffff;
 		width: 50px;
 		transition: color 0.3s ease;
+		height: 44px;
+		@include media('md'){
+			width: 40px;
+			top: 100px;
+		}
+		@include media('sm'){
+			display: none;
+		}
 		&::after{
 			display: none;
 		}
 		&-prev{
 			left: 0;
 			transform: scaleX(-1);
+			@include media('md'){
+				left: -35px;
+			}
 		}
 		&-next{
 			right: 0;
+			@include media('md'){
+				right: -35px;
+			}
 		}
-		&:hover{
-			color: $orange;
+		@include media('sm',false) {
+			&:hover {
+				color: $orange;
+			}
 		}
 	}
 	&-pagination{
@@ -420,7 +718,6 @@
 		}
 	}
 }
-
 .qs{
 	&__text{
 		font-style: normal;
@@ -428,6 +725,9 @@
 		font-size: 19px;
 		line-height: 130%;
 		text-align: center;
+		@include media('xs'){
+			font-size: 16px;
+		}
 	}
 	&__info{
 		font-family: $secondFont;
@@ -438,6 +738,10 @@
 		text-align: center;
 		letter-spacing: 0.06em;
 		margin-top: 50px;
+		@include media('xs'){
+			font-size: 25px;
+			margin-top: 35px;
+		}
 		span{
 			color: $orange;
 		}
@@ -446,16 +750,30 @@
 
 .author{
 	max-width: 1920px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	min-height: 665px;
 	&__flex{
 		display: flex;
+		@include media('md'){
+			flex-direction: column-reverse;
+		}
 	}
 	&__left{
 		width: calc(50% + 30px);
+		box-sizing: border-box;
+		padding: 0 20px;
+		@include media('md'){
+			width: 100%;
+		}
 	}
 	&__right{
 		width: calc(50% - 30px);
+		@include media('md'){
+			width: 100%;
+			padding: 0 20px;
+			margin-bottom: 35px;
+		}
 		img{
 			width: 100%;
 			height: 100%;
@@ -478,9 +796,18 @@
 		line-height: 72px;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
+		text-align: center;
+		@include media('xs'){
+			font-size: 28px;
+			line-height: 50px;
+		}
 		span{
 			color: $orange;
-			font-size: 	55px;
+			font-size: 55px;
+			@include media('xs'){
+				font-size: 45px;
+				display: block;
+			}
 		}
 	}
 	&__info{
@@ -501,6 +828,10 @@
 		border-radius: 10px;
 		position: relative;
 		width: 100%;
+		@include media('xs'){
+			margin-top: 40px;
+			padding: 30px 15px 15px 15px;
+		}
 
 		&::before{
 			content: "";
@@ -512,6 +843,12 @@
 			position: absolute;
 			top: 31px;
 			left: 26px;
+			@include media('xs'){
+				top: -20px;
+				left: 5px;
+				width: 47px;
+				height: 47px;
+			}
 		}
 		&-text{
 			font-family: $titleFont;
@@ -519,6 +856,9 @@
 			font-weight: normal;
 			font-size: 19px;
 			line-height: 130%;
+			@include media('xs'){
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -528,8 +868,20 @@
 	width: 100%;
 	position: relative;
 	padding: 250px 0 305px;
-	background: rgba(0, 0, 0, 0.45);
 	color: #ffffff;
+	@include media('xl'){
+		padding: 150px 0 200px;
+	}
+	@include media('md'){
+		padding: 100px 0 150px;
+	}
+	@include media('sm'){
+		padding: 75px 0 100px;
+		background: rgba(0, 0, 0, 0.45);
+	}
+	@include media('xs'){
+		padding: 60px 0 60px;
+	}
 	&__bg{
 		display: block;
 		width: 100%;
@@ -552,6 +904,12 @@
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		color: $orange;
+		@include media('sm'){
+			font-size: 70px;
+		}
+		@include media('xs'){
+			font-size: 65px;
+		}
 	}
 	&__subtitle{
 		font-family: $titleFont;
@@ -560,9 +918,24 @@
 		font-size: 40px;
 		line-height: 130%;
 		text-align: center;
+		@include media('md'){
+			font-size: 37px;
+		}
+		@include media('sm'){
+			font-size: 32px;
+		}
+		@include media('xs'){
+			font-size: 25px;
+		}
 	}
 	&__form{
 		margin-top: 128px;
+		@include media('md'){
+			margin-top: 75px;
+		}
+		@include media('xs'){
+			margin-top: 50px;
+		}
 	}
 }
 
@@ -577,9 +950,20 @@
 		text-transform: uppercase;
 		margin-bottom: 75px;
 		text-align: center;
+		@include media('md'){
+			margin-bottom: 55px;
+			font-size: 60px;
+		}
+		@include media('sm'){
+			font-size: 50px;
+		}
+		@include media('xs'){
+			font-size: 32px;
+		}
 	}
 	&__block{
 		width: 460px;
+		max-width: 100%;
 		margin: 0 auto;
 		+.rform__block{
 			margin-top: 43px;
@@ -589,6 +973,9 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			@include media('xs'){
+				display: block;
+			}
 		}
 	}
 	&__title{
@@ -599,11 +986,18 @@
 		line-height: 130%;
 		letter-spacing: 0.04em;
 		color: #FFFFFF;
+		@include media('xs'){
+			text-align: center;
+		}
 	}
 	&__socials{
 		display: flex;
 		justify-content: space-between;
 		width: 260px;
+		max-width: 100%;
+		@include media('xs'){
+			margin: 15px auto;
+		}
 	}
 	&__social{
 		width: 60px;
@@ -624,11 +1018,17 @@
 	&__form{
 		margin-top: 44px;
 		width: 100%;
+		@include media('xs'){
+			margin-top: 25px;
+		}
 	}
 	&__input{
 		display: block;
 		width: 100%;
 		margin-bottom: 29px;
+		@include media('xs'){
+			margin-bottom: 20px;
+		}
 		input{
 			width: 100%;
 			font-family: $mainFont;
@@ -644,6 +1044,12 @@
 			border-radius: 5px;
 			height: 63px;
 			background: transparent;
+
+			@include media('xs'){
+				text-indent: 20px;
+				font-size: 17px;
+				height: 50px;
+			}
 			&::placeholder{
 				font-family: $mainFont;
 				color: #FFFFFF;
@@ -658,6 +1064,7 @@
 	}
 	&__agree{
 		display: flex;
+		align-items: flex-start;
 		&-checkbox{
 			cursor: pointer;
 			flex-shrink: 0;
@@ -709,10 +1116,13 @@
 					bottom: 0;
 					background: #ffffff;
 				}
-				&:hover{
-					color: $pink;
-					&::before{
-						display: none;
+				@include media('sm',false) {
+					&:hover {
+						color: $pink;
+
+						&::before {
+							display: none;
+						}
 					}
 				}
 			}
@@ -721,5 +1131,8 @@
 	&__btn{
 		width: 100%;
 		margin-top: 57px;
+		@include media('xs'){
+			margin-top: 40px;
+		}
 	}
 }

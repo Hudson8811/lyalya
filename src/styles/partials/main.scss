@@ -9,9 +9,11 @@ body {
 a{
 	color: $linkMainColor;
 	text-decoration: underline;
-	&:hover{
-		color: $linkHoverColor;
-		text-decoration: none;
+	@include media('sm',false){
+		&:hover{
+			color: $linkHoverColor;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -21,6 +23,9 @@ a{
 	padding: 0 20px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	@include media('sm'){
+		padding: 0 15px;
+	}
 }
 
 .btn{
@@ -40,15 +45,37 @@ a{
 	text-align: center;
 	letter-spacing: 0.065em;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: #FFFFFF !important;
 	background: $pink;
 	text-decoration: none;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
-	&:hover{
-		color: #ffffff;
-		background: $orange;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	span{
+		display: none;
+		@include media('sm',false) {
+			display: block;
+			position: absolute;
+			z-index: -1;
+			width: 0;
+			height: 0;
+			transition: width .6s,height .6s;
+			transform: translate(-50%,-50%);
+			border-radius: 50%;
+			background-color: $orange;
+		}
 	}
+	@include media('sm',false) {
+		&:hover {
+			span{
+				width: 100rem;
+				height: 100rem;
+			}
+		}
+	}
+
 }
 
 

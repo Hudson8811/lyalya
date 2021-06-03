@@ -2,11 +2,14 @@ header.header.js_fixed-header
 	.header__container
 		.header__logo
 			a(href="") Ляля Шанти
-		.header__burger
+		a.header__burger(href="javascript:;")
 			span
 			span
 			span
 		.header__menu.hm
+			a.hm__close(href="javascript:;")
+				svg
+					use(xlink:href="images/sprite.svg#close")
 			.hm__item.hm__item--current
 				a(href="") Home
 			.hm__item
