@@ -170,7 +170,7 @@
 				object-fit: contain;
 			}
 		}
-		@include media('md'){
+		@include media('sm'){
 			right: 15px;
 			top: 25px;
 		}
