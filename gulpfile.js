@@ -7,14 +7,16 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
+const image = require('gulp-image');
 const newer = require('gulp-newer');
+const rename = require("gulp-rename");
 const del = require('del');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const pngquant = require('imagemin-pngquant');
 const pug = require('gulp-pug');
 const rigger = require('gulp-rigger');
-
+const svgstore = require("gulp-svgstore");
 
 
 function browsersync() {
@@ -32,6 +34,7 @@ function startwatch() {
 	watch('src/**/styles/**/*', styles);
 	watch('src/**/*.html').on('change', browserSync.reload);
 	watch('src/images/**/*', images);
+	watch('src/icons/**/*.svg', icons);
 	watch('src/pug/**/*.pug', pugHtml);
 }
 
@@ -81,12 +84,39 @@ function images() {
 	return src('src/images/**/*')
 		.pipe(plumber())
 		.pipe(newer('build/images/'))
-		.pipe(imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()],
-			interlaced: true
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.mozjpeg({quality: 75, progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: false},
+					{cleanupIDs: false}
+				]
+			})
+		]))
+		.pipe(dest('build/images/'))
+		.pipe(browserSync.stream())
+}
+
+function icons() {
+	return src('src/icons/**/*.svg')
+		.pipe(plumber())
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.mozjpeg({quality: 75, progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: false},
+					{cleanupIDs: false}
+				]
+			})
+		]))
+		.pipe(svgstore({
+			inlineSvg: true
 		}))
+		.pipe(rename('sprite.svg'))
 		.pipe(dest('build/images/'))
 		.pipe(browserSync.stream())
 }
@@ -107,8 +137,9 @@ exports.scripts = scripts;
 exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
+exports.icons = icons;
 
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);

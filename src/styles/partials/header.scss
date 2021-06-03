@@ -1,5 +1,5 @@
 .header{
-	padding: 0 70px;
+	padding: 30px 70px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -34,6 +34,32 @@
 		}
 	}
 	&__menu{}
+
+	&--fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #ffffff;
+		border-top: none;
+		box-shadow: 0 1px 0 0 #dddddd;
+		transition: transform 0.5s ease;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		.header__logo{
+			a{
+				color: #000000;
+			}
+		}
+		.hm__item:not(.hm__item--current){
+			a{
+				color: #000000;
+				&:hover{
+					color: $pink;
+				}
+			}
+		}
+	}
 }
 .hm{
 	display: flex;

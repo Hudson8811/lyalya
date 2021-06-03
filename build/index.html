@@ -9,7 +9,7 @@
     <title>HOME</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header js_fixed-header">
       <div class="header__container">
         <div class="header__logo"><a href="">Ляля Шанти</a></div>
         <div class="header__menu hm">
@@ -28,7 +28,7 @@
           <div class="hero-block__content">
             <h1 class="hero-block__title">Близость</h1>
             <h2 class="hero-block__subtitle">Искусство Трансформационного Общения</h2>
-            <div class="hero-block__text">3-дневный марафон, который научит тебя выстраивать близость в отношениях <br><span>16,</span> <span>17</span> и <span>18</span> июня в <span>19:30</span></div><a class="hero-block__btn btn" href="#">Я хочу!</a>
+            <div class="hero-block__text">3-дневный марафон, который научит тебя выстраивать близость в отношениях <br><span>16,</span> <span>17</span> и <span>18</span> июня в <span>19:30</span></div><a class="hero-block__btn btn" href="#registration">Я хочу!</a>
           </div>
         </div>
       </section>
@@ -86,7 +86,37 @@
         </div>
       </section>
       <section class="quotes section-6">
-        <div class="quotes__container container"><img class="quotes__shape" src="images/q.svg" alt=""></div>
+        <div class="quotes__container container"><img class="quotes__shape" src="images/q.png" alt="">
+          <div class="quotes__slider">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide qs">
+                  <div class="qs__text">Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.</div>
+                  <div class="qs__info"> <span>Светлана</span>,<br> участница курса “Контакт”</div>
+                </div>
+                <div class="swiper-slide qs">
+                  <div class="qs__text">Впервые в жизнь решилась поговорить так с мужчиной. Впервые в жизнь решилась поговорить так с мужчиной. Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.</div>
+                  <div class="qs__info"> <span>Николай</span>,<br> участница курса “Контакт”</div>
+                </div>
+                <div class="swiper-slide qs">
+                  <div class="qs__text">Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.</div>
+                  <div class="qs__info"> <span>Вадим</span>,<br> участница курса “Контакт”</div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button swiper-button-prev">
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="swiper-button swiper-button-next">
+              <svg>
+                <use xlink:href="images/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="problem section-7">
         <div class="problem__container container">
@@ -130,16 +160,18 @@
       <section class="author section-11">
         <div class="author__flex">
           <div class="author__left">
-            <div class="author__name">Автор марафона: <span>Ляля Шанти</span></div>
-            <div class="author__info">Коуч в сфере любви, сексуальности и осознанных отношений</div>
-            <div class="author__quote">
-              <div class="author__quote-text">Более 15 лет я работаю с женщинами, сопровождая их на пути восстановления контакта с собой и своей сутью, обретения целостности, ценности себя, наслаждения и вдохновения от жизни. По моему опыту, аунтентичное общение — одна из самых эффективных, действенных практик. Ее результат мгновенный, а потенциал действительно потрясающих трансформаций просто бесконечен.  Я искренне верю, что эти знания нужно преподавать в начальной школе, и что если бы больше людей начали применять их на практике, мир изменился бы до неузнаваемости.</div>
+            <div class="author__inner">
+              <div class="author__name">Автор марафона: <span>Ляля Шанти</span></div>
+              <div class="author__info">Коуч в сфере любви, сексуальности и осознанных отношений</div>
+              <div class="author__quote">
+                <div class="author__quote-text">Более 15 лет я работаю с женщинами, сопровождая их на пути восстановления контакта с собой и своей сутью, обретения целостности, ценности себя, наслаждения и вдохновения от жизни. По моему опыту, аунтентичное общение — одна из самых эффективных, действенных практик. Ее результат мгновенный, а потенциал действительно потрясающих трансформаций просто бесконечен.  Я искренне верю, что эти знания нужно преподавать в начальной школе, и что если бы больше людей начали применять их на практике, мир изменился бы до неузнаваемости.</div>
+              </div>
             </div>
           </div>
           <div class="author__right"><img src="images/img-10.jpg" alt=""></div>
         </div>
       </section>
-      <section class="registration section-12"><img class="registration__bg" src="images/img-11.jpg" alt="">
+      <section class="registration section-12" id="registration"><img class="registration__bg" src="images/img-11.jpg" alt="">
         <div class="registration__container container">
           <div class="registration__title">Близость</div>
           <div class="registration__subtitle">Искусство Трансформационного Общения</div>
@@ -147,19 +179,28 @@
             <div class="rform__label">Зарегистрироваться на марафон</div>
             <div class="rform__block rform__block--flex">
               <div class="rform__title">Через соц. сети</div>
-              <div class="rform__socials"><a class="rform__social" href=""><img src="images/facebook.svg" alt=""></a><a class="rform__social" href=""><img src="images/telegram.svg" alt=""></a><a class="rform__social" href=""><img src="images/vk.svg" alt=""></a></div>
+              <div class="rform__socials"><a class="rform__social" href="">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#facebook"></use>
+                  </svg></a><a class="rform__social" href="">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#telegram"></use>
+                  </svg></a><a class="rform__social" href="">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#vk"></use>
+                  </svg></a></div>
             </div>
             <div class="rform__block">
               <div class="rform__title">Через почту</div>
               <form class="rform__form" method="post">
                 <label class="rform__input">
-                  <input type="text" name="" placeholder="Имя">
+                  <input type="text" name="" placeholder="Имя" required>
                 </label>
                 <label class="rform__input">
-                  <input type="email" name="" placeholder="E-mail">
+                  <input type="email" name="" placeholder="E-mail" required>
                 </label>
                 <label class="rform__input">
-                  <input type="tel" name="" placeholder="Телефон">
+                  <input type="tel" name="" placeholder="Телефон" required>
                 </label>
                 <div class="rform__agree">
                   <label class="rform__agree-checkbox">

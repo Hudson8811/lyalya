@@ -38,6 +38,9 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.35;
 }
+html{
+	scroll-behavior: smooth;
+}
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],

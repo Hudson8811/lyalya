@@ -14,7 +14,7 @@ block main
 				h1.hero-block__title Близость
 				h2.hero-block__subtitle Искусство Трансформационного Общения
 				.hero-block__text 3-дневный марафон, который научит тебя выстраивать близость в отношениях <br><span>16,</span> <span>17</span> и <span>18</span> июня в <span>19:30</span>
-				a.hero-block__btn.btn(href="#") Я хочу!
+				a.hero-block__btn.btn(href="#registration") Я хочу!
 
 
 	section.problem.section-2
@@ -70,7 +70,26 @@ block main
 
 	section.quotes.section-6
 		.quotes__container.container
-			img.quotes__shape(src="images/q.svg" alt="")
+			img.quotes__shape(src="images/q.png" alt="")
+			.quotes__slider
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide.qs
+							.qs__text Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.
+							.qs__info  <span>Светлана</span>,<br> участница курса “Контакт”
+						.swiper-slide.qs
+							.qs__text Впервые в жизнь решилась поговорить так с мужчиной. Впервые в жизнь решилась поговорить так с мужчиной. Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.
+							.qs__info  <span>Николай</span>,<br> участница курса “Контакт”
+						.swiper-slide.qs
+							.qs__text Впервые в жизнь решилась поговорить так с мужчиной. Было страшно решиться. Мы говорили по телефону и все равно это было потрясающе эмоционально и близко. Он “обнял” меня, полностью принял, открылся в ответ. Говорили об общих страхах, желаниях, мечтах. Я почувствовала облегчение. Счастье, принятие. Страх очень быстро ушел, хотелось идти глубже, соединиться с ним. Чужой человек стал близок. Счастье, радость, легкость.
+							.qs__info  <span>Вадим</span>,<br> участница курса “Контакт”
+					.swiper-pagination
+				.swiper-button.swiper-button-prev
+					svg
+						use(xlink:href="images/sprite.svg#arrow")
+				.swiper-button.swiper-button-next
+					svg
+						use(xlink:href="images/sprite.svg#arrow")
 
 
 	section.problem.section-7
@@ -114,14 +133,15 @@ block main
 	section.author.section-11
 		.author__flex
 			.author__left
-				.author__name Автор марафона: <span>Ляля Шанти</span>
-				.author__info Коуч в сфере любви, сексуальности и осознанных отношений
-				.author__quote
-					.author__quote-text Более 15 лет я работаю с женщинами, сопровождая их на пути восстановления контакта с собой и своей сутью, обретения целостности, ценности себя, наслаждения и вдохновения от жизни. По моему опыту, аунтентичное общение — одна из самых эффективных, действенных практик. Ее результат мгновенный, а потенциал действительно потрясающих трансформаций просто бесконечен.  Я искренне верю, что эти знания нужно преподавать в начальной школе, и что если бы больше людей начали применять их на практике, мир изменился бы до неузнаваемости.
+				.author__inner
+					.author__name Автор марафона: <span>Ляля Шанти</span>
+					.author__info Коуч в сфере любви, сексуальности и осознанных отношений
+					.author__quote
+						.author__quote-text Более 15 лет я работаю с женщинами, сопровождая их на пути восстановления контакта с собой и своей сутью, обретения целостности, ценности себя, наслаждения и вдохновения от жизни. По моему опыту, аунтентичное общение — одна из самых эффективных, действенных практик. Ее результат мгновенный, а потенциал действительно потрясающих трансформаций просто бесконечен.  Я искренне верю, что эти знания нужно преподавать в начальной школе, и что если бы больше людей начали применять их на практике, мир изменился бы до неузнаваемости.
 			.author__right
 				img(src="images/img-10.jpg" alt="")
 
-	section.registration.section-12
+	section.registration.section-12#registration
 		img.registration__bg(src="images/img-11.jpg" alt="")
 		.registration__container.container
 			.registration__title Близость
@@ -132,20 +152,23 @@ block main
 					.rform__title Через соц. сети
 					.rform__socials
 						a.rform__social(href="")
-							img(src="images/facebook.svg" alt="")
+							svg
+								use(xlink:href="images/sprite.svg#facebook")
 						a.rform__social(href="")
-							img(src="images/telegram.svg" alt="")
+							svg
+								use(xlink:href="images/sprite.svg#telegram")
 						a.rform__social(href="")
-							img(src="images/vk.svg" alt="")
+							svg
+								use(xlink:href="images/sprite.svg#vk")
 				.rform__block
 					.rform__title Через почту
 					form.rform__form(method="post")
 						label.rform__input
-							input(type="text" name="" placeholder="Имя")
+							input(type="text" name="" placeholder="Имя" required)
 						label.rform__input
-							input(type="email" name="" placeholder="E-mail")
+							input(type="email" name="" placeholder="E-mail" required)
 						label.rform__input
-							input(type="tel" name="" placeholder="Телефон")
+							input(type="tel" name="" placeholder="Телефон" required)
 						.rform__agree
 							label.rform__agree-checkbox
 								input(type="checkbox" name="agree" required)

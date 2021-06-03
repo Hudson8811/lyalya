@@ -6,9 +6,12 @@
 /* mixin */
 @import "base/mixin";
 
+/*libs*/
+@import "./../../node_modules/swiper/swiper-bundle.min.css";
 
 /* main */
 @import "partials/main";
+
 
 /* components */
 
