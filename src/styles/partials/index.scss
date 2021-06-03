@@ -523,6 +523,9 @@
 
 		&-text{
 			max-width: 480px;
+			@include media('sm'){
+				max-width: 100%;
+			}
 		}
 	}
 
