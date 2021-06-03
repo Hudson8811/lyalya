@@ -87,7 +87,7 @@ $(window).on('load',function (){
 
 	let diff = currentTimer - timerStart;
 	let diffSec = Math.round(diff / 100);
-	if (diffSec < 13){
+	if (diffSec < 15){
 		setTimeout(function (){
 			$('#preloader').fadeOut(700,function (){
 				$('#preloader').remove();
