@@ -6,6 +6,11 @@
 	z-index: 99;
 	width: 100%;
 	box-sizing: border-box;
+
+	@include media('md'){
+		padding: 30px 35px;
+	}
+
 	&__container{
 		max-width: 1780px;
 		width: 100%;
@@ -16,6 +21,11 @@
 		justify-content: center;
 		position: relative;
 		padding: 0 150px;
+
+		@include media('md'){
+			padding: 0;
+			justify-content: space-between;
+		}
 	}
 	&__logo{
 		position: absolute;
@@ -28,11 +38,35 @@
 		line-height: 30px;
 		color: #FFFFFF;
 		font-family: $titleFont;
+
+		@include media('md'){
+			position: static;
+			transform: none;
+		}
+
 		a{
 			text-decoration: none;
 			color: #ffffff;
 		}
 	}
+
+	&__burger{
+		display: none;
+		@include media('md'){
+			display: block;
+		}
+		span{
+			display: block;
+			width: 22px;
+			height: 2px;
+			border-radius: 1px;
+			background-color: #000;
+			+span{
+				margin-top: 4px;
+			}
+		}
+	}
+
 	&__menu{}
 
 	&--fixed{
@@ -46,6 +80,13 @@
 		transition: transform 0.5s ease;
 		padding-top: 15px;
 		padding-bottom: 15px;
+
+
+		@include media('md'){
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
 		.header__logo{
 			a{
 				color: #000000;
@@ -65,6 +106,12 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+
+
+	@include media('md'){
+		display: none;
+	}
+
 	&__item{
 		margin: 15px 21px;
 		a{

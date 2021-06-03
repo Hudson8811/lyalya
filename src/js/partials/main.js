@@ -34,4 +34,15 @@
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+
+
+
+	AOS.init({
+		disable: "mobile",
+		offset: 120,
+		once: true,
+		duration: 1000,
+		easing: "ease"
+	})
 })();

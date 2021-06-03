@@ -50,3 +50,36 @@ a{
 		background: $orange;
 	}
 }
+
+
+[data-aos=image-mask-animation] {
+	transition-property: transform;
+	transform: translate3d(-100%,0,0);
+	&.aos-animate {
+		transform: translateZ(0);
+	}
+}
+
+
+.image-block{
+	position: relative;
+	overflow: hidden;
+}
+.img-mask{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	width: 120%;
+	&__inside{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: skewX(-10deg);
+		transform-origin: bottom;
+		background-color: #fff;
+	}
+}
