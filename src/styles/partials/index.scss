@@ -77,11 +77,13 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: -1;
+		background-size: cover;
+		background-position: top center;
+		background-attachment: fixed;
 	}
 
 	&__container{
@@ -570,6 +572,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 40px 0;
+	overflow: hidden;
 	@include media('xl'){
 		min-height: 700px;
 	}
@@ -578,8 +581,21 @@
 	}
 	@include media('sm'){
 		min-height: 400px;
+	}
+
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
 		background: rgba(0, 0, 0, 0.45);
 	}
+
 	&__bg{
 		display: block;
 		width: 100%;
@@ -590,7 +606,10 @@
 		top: 0;
 		z-index: -1;
 	}
-	&__container{}
+	&__container{
+		position: relative;
+		z-index: 2;
+	}
 	&__text{
 		max-width: 940px;
 		margin: 0 auto;
@@ -902,11 +921,13 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: -1;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
 	}
 	&__container{}
 

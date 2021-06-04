@@ -79,6 +79,12 @@
 							AOS.refresh()
 					)
 			);
+
+
+	var images = document.querySelectorAll('.parallax');
+	new simpleParallax(images, {
+		scale: 1.25
+	});
 })();
 
 
@@ -100,3 +106,4 @@ $(window).on('load',function (){
 	}
 	AOS.refresh();
 });
+
