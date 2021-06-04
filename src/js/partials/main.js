@@ -83,7 +83,9 @@
 
 	var images = document.querySelectorAll('.parallax');
 	new simpleParallax(images, {
-		scale: 1.25
+		scale: 1.3,
+		delay: 1,
+		transition: 'cubic-bezier(0,0,0,1)'
 	});
 })();
 
